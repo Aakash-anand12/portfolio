@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Aakash_portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f2f5, #dfe9f3);
+      color: #333;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #5b7690;
+      color: rgb(186, 163, 163);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
+      color: rgb(71, 16, 16);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .nav-links li a:hover {
+      color: #ffd700;
+    }
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #878f96, #00bcd4);
+      color: rgb(52, 10, 10);
+      animation: fadeIn 2s ease-in;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .hero .btn {
+      background: white;
+      color: #af8c29;
+      padding: 10px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+      transition:  0.3s;
+    }
+    .hero .btn:hover {
+      background: #957e7e;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      animation: fadeUp 1s ease-in-out;
+    }
+    h2 {
+      font-size: 2em;
+      color: #1e90ff;
+      margin-bottom: 20px;
+    }
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+    }
+    .skills-list li {
+      background: #e0f7fa;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skills-list li:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+    .skills-list li i {
+      font-size: 20px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .project {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-left: 5px solid #1e90ff;
+      background: #f9f9f9;
+      border-radius: 10px;
+    }
+    .project a {
+      color: #1e90ff;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: #006bb3;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <h1 class="logo">Aakash Anand</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero" data-aos="zoom-in">
+    <h2>Hello, I'm Aakash Anand</h2>
+    <p>Full Stack Developer | Open to Opportunities</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Passionate software engineering student, graduating in August 2026, with expertise in Java, C++, and web development. Skilled in front-end and back-end technologies, eager to build scalable and efficient applications.</p>
+  </section>
+
+  <section id="skills" data-aos="fade-right">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><i class="fab fa-js-square"></i>JavaScript</li>
+      <li><i class="fab fa-react"></i>React.js</li>
+      <li><i class="fas fa-layer-group"></i>Next.js</li>
+      <li><i class="fab fa-node-js"></i>Node.js</li>
+      <li><i class="fas fa-database"></i>MongoDB</li>
+      <li><i class="fas fa-server"></i>Express.js</li>
+      <li><i class="fab fa-html5"></i>HTML & CSS</li>
+      <li><i class="fas fa-users"></i>Teamwork</li>
+      <li><i class="fas fa-code"></i>C++</li>
+      <li><i class="fab fa-python"></i>Python</li>
+      <li><i class="fas fa-database"></i>MySQL</li>
+      <li><i class="fab fa-java"></i>Java</li>
+    </ul>
+  </section>
+
+  <section id="projects" data-aos="fade-left">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Event Management Platform</h3>
+      <p>A platform to create and book events. Features real-time notifications and payment integration. Built using React, Node.js, and MongoDB.</p>
+      <a href="https://github.com/Aakash-anand12/Event_Management_Website">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Expense Tracker</h3>
+      <p>Track expenses efficiently. Secure and user-friendly. Built using HTML, CSS, JS, and Firebase.</p>
+      <a href="https://github.com/Aakash-anand12/expense-tracker">View Project</a>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="zoom-in">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aakash Anand. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks for reaching out! I will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
